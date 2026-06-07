@@ -1,6 +1,6 @@
 # Choroidal (Uveal) Metastasis from Male Breast Carcinoma: A Systematic Review of Reported Cases (1952–2025)
 
-> Prepared following the **Academic Research Suite — `deep-research` skill, `systematic-review` mode** (PRISMA 2020). Literature was identified through **PubMed/MEDLINE** and **Scopus** (Web of Science export pending — see §2.2). Because the included evidence consists entirely of single-arm case reports and small case series, quantitative meta-analysis was not feasible; a **structured narrative synthesis (SWiM)** was performed, with **JBI Critical Appraisal for Case Reports** used in place of RoB 2 / ROBINS-I (documented protocol deviation), and **GRADE** applied to rate certainty.
+> Prepared following the **Academic Research Suite — `deep-research` skill, `systematic-review` mode** (PRISMA 2020). Literature was identified through **PubMed/MEDLINE**, **Scopus**, and **Web of Science Core Collection** (see §2.2). Because the included evidence consists entirely of single-arm case reports and small case series, quantitative meta-analysis was not feasible; a **structured narrative synthesis (SWiM)** was performed, with **JBI Critical Appraisal for Case Reports** used in place of RoB 2 / ROBINS-I (documented protocol deviation), and **GRADE** applied to rate certainty.
 
 ---
 
@@ -13,7 +13,7 @@ Male breast cancer accounts for roughly 0.5–1% of all breast cancers. The uvea
 To systematically identify and synthesize all reported cases of choroidal/uveal metastasis arising from primary male breast carcinoma, and to describe demographics, tumour characteristics, presentation, management, and outcomes (PICOS in §1.2).
 
 ### Data Sources
-PubMed/MEDLINE and Scopus from inception to **7 June 2026** (last search date). Web of Science export pending.
+PubMed/MEDLINE, Scopus, and Web of Science Core Collection from inception to **7 June 2026** (last search date).
 
 ### Study Selection
 Primary studies (case reports/series) describing histologically confirmed breast carcinoma in a male patient with choroidal or other uveal metastasis. Reviews, female-only series, and reports of metastasis *to* the breast were excluded.
@@ -82,9 +82,9 @@ PICOS framing (adapted for a descriptive case-based review):
 | PubMed/MEDLINE (NCBI) | Inception – 2026/06/07 | 2026-06-07 |
 | Scopus (Elsevier) | Inception – 2026/06/07 | 2026-06-07 |
 | Reference lists of included reports & related reviews (backward citation) | — | 2026-06-07 |
-| Web of Science Core Collection | — | **Pending** (search string prepared, §2.3; export not yet incorporated) |
+| Web of Science Core Collection (Clarivate) | Inception – 2026/06/07 | 2026-06-07 |
 
-> **Note on coverage:** Two databases (PubMed + Scopus) were searched and cross-deduplicated; Scopus uniquely contributed cases not retrieved by PubMed (see §3.1). Adding **Web of Science** (string ready) and **Embase** would further reduce the risk of missing reports and is recommended before journal submission (§4.2).
+> **Note on coverage:** Three databases (PubMed + Scopus + Web of Science) were searched and cross-deduplicated. Scopus uniquely contributed two cases not retrieved by PubMed; Web of Science returned no additional eligible reports, providing convergent evidence that case ascertainment is approaching saturation (see §3.1). Adding **Embase** would further reduce the risk of missing reports and is recommended before journal submission (§4.2).
 
 ### 2.3 Search Strategy [PRISMA Item 7]
 
@@ -108,7 +108,7 @@ TITLE-ABS-KEY ( ( "male breast" OR ( breast W/3 ( man OR men OR male ) ) )
                 AND ( choroid* OR uveal OR uvea ) AND metasta* )
 ```
 
-**Web of Science (prepared, pending execution):**
+**Web of Science Core Collection (executed 2026-06-07):**
 
 ```
 TS=( ( "male breast" OR ( breast NEAR/3 ( man OR men OR male ) ) )
@@ -174,12 +174,13 @@ Formal funnel-plot/statistical assessment is not applicable. Reporting bias is a
  │   PubMed (precision title pass) ............ n = 23  │
  │   PubMed (broad passes, screened) ..... n ≈ 106–178  │
  │   Scopus (focused query) ................... n = 34  │
+ │   Web of Science (focused query) ........... n = 17  │
  │ Records from reference lists / backward citation n=4 │
  └──────────────────────┬──────────────────────────────┘
                         │
  ┌──────────────────────▼──────────────────────────────┐
- │ Duplicates removed (Scopus ∩ PubMed ≈ 18 overlap;    │
- │  plus inter-pass duplicates within PubMed)           │
+ │ Duplicates removed (Scopus ∩ PubMed ≈ 18; Web of     │
+ │  Science ∩ prior ≈ 17; plus inter-pass PubMed dups)  │
  └──────────────────────┬──────────────────────────────┘
                         │
  ┌──────────────────────▼──────────────────────────────┐
@@ -203,13 +204,15 @@ Formal funnel-plot/statistical assessment is not applicable. Reporting bias is a
  │                  INCLUDED                            │
  ├─────────────────────────────────────────────────────┤
  │ Reports included in review: n = 22                   │
- │   from PubMed: 20 │ added uniquely via Scopus: 2     │
+ │   PubMed 20 │ +Scopus 2 │ +Web of Science 0          │
  │ Male patients described: ≈ 28                        │
  │ Studies in quantitative synthesis: 0 (narrative)     │
  └─────────────────────────────────────────────────────┘
 ```
 
 **Scopus contribution [16a].** Of 34 Scopus records, 18 duplicated PubMed-derived includes and ~14 were excluded (reviews/book chapters, thyroid or gastrointestinal primaries, the reverse-direction choroidal-melanoma case, general/mixed-sex cohorts). **Two new eligible reports were added that PubMed had not surfaced:** Cohen et al. (2005) — PubMed-indexed (PMID 16087857) but missed by the title filter because the title contains no "breast" term — and Tassinari et al. (1991), which is **not indexed in PubMed** (Italian journal). This directly demonstrates the value of multi-database searching.
+
+**Web of Science contribution [16a].** The focused Web of Science query returned 17 records: 12 duplicated already-included reports and 5 were excluded (one review [Camarillo et al. 2008], one gastrointestinal [Treviño-Rodríguez et al. 2018] and one thyroid primary [Makhija et al. 2015], and two general/mixed-sex cohorts [Hutchison & Smith 1979; Dobrowsky 1988]). **No new eligible reports were identified.** Web of Science did **not** retrieve the two Scopus-unique additions (Cohen 2005; Tassinari 1991), just as PubMed and Scopus did not fully overlap — underscoring database complementarity. The failure of a third independent database to surface any new case provides **convergent evidence that ascertainment is approaching saturation.**
 
 **Notable exclusions with reasons [16b]:** Esposito et al. 1994 (*Radiol Med*) — choroidal **melanoma** metastatic *to* the male breast (reverse direction); Makhija et al. 2015 (papillary **thyroid** carcinoma) and Treviño-Rodríguez et al. 2018 (upper **gastrointestinal** cancer) — non-breast primaries; Damato et al. 2025, Vajzovic/Tang et al. (book chapters), Chong & Mick 2005, Jeddi et al. 1994, Camarillo et al. 2008 (reviews); Vidal Candela et al. 2002, Niu et al. 2006, Hutchinson & Smith 1979, Dobrowsky 1988 (general/mixed-sex cohorts) — used for **context only**. Large mixed-sex uveal-metastasis cohorts (Demirci et al., 2003; Shields et al., 2022; Li et al., 2025; Salcedo-Villanueva et al., 2021; Lin et al., 2025) likewise inform context, not inclusion.
 
@@ -348,7 +351,7 @@ Two clinically actionable messages emerge. First, **breast carcinoma should be r
 - Indirect, non-quantitative comparison with female cohorts.
 
 **Limitations of the review process:**
-- **Two databases searched (PubMed + Scopus).** This is stronger than a single-database review and already yielded 2 additional cases, but **Web of Science (string prepared) and Embase were not yet incorporated**; some reports (e.g., non-indexed or non-English) may still be missed.
+- **Three databases searched (PubMed + Scopus + Web of Science).** Scopus added 2 cases and Web of Science added none (convergent validation of completeness). **Embase was not searched**, and grey literature / conference abstracts were not sought; some non-indexed or non-English reports may still be missed.
 - **Single AI-assisted reviewer** for screening, extraction, and appraisal (no independent double-screening) → risk of selection and extraction error.
 - **Not prospectively registered.**
 - **Possible patient overlap** among single-institution series not fully resolvable from abstracts.
@@ -362,7 +365,7 @@ Two clinically actionable messages emerge. First, **breast carcinoma should be r
 - Use EBRT for sight-threatening lesions; consider systemic endocrine/targeted therapy first in HR-positive disease, with close ophthalmic monitoring.
 
 **For research:**
-- Completing the **Web of Science + Embase** searches and obtaining **full texts** (with dual independent reviewers and individual-patient-data extraction) would strengthen this synthesis.
+- Adding an **Embase** search and obtaining **full texts** (with dual independent reviewers and individual-patient-data extraction) would further strengthen this synthesis.
 - A prospectively registered (PROSPERO) protocol should precede the updated version.
 - International ocular-oncology registries should report sex-disaggregated male breast-cancer uveal-metastasis data to enable pooled analysis.
 
@@ -377,7 +380,7 @@ Two clinically actionable messages emerge. First, **breast carcinoma should be r
 Not prospectively registered. Recommendation: register on **PROSPERO** before an updated/publishable version; pre-specify databases (PubMed + Scopus + Web of Science + Embase), dual screening, and IPD extraction.
 
 ### 5.2 Support [PRISMA Item 25]
-No funding. Conducted as an AI-assisted desk review using the Academic Research Suite `deep-research` skill, PubMed/NCBI, and a user-supplied Scopus export.
+No funding. Conducted as an AI-assisted desk review using the Academic Research Suite `deep-research` skill, PubMed/NCBI, and user-supplied Scopus and Web of Science exports.
 
 ### 5.3 Competing Interests [PRISMA Item 26]
 None declared.
@@ -387,7 +390,7 @@ None declared.
 - [x] Included-study characteristics (Table 1)
 - [x] Risk-of-bias assessments (Table 2)
 - [x] List of key excluded studies with reasons (§3.1)
-- [ ] Web of Science / Embase exports (pending)
+- [ ] Embase export (pending)
 - [ ] PRISMA 2020 checklist (to be completed by authors before submission)
 
 ### 5.5 AI Disclosure
@@ -448,9 +451,11 @@ This systematic review was produced with **AI-assisted research tools** (Academi
 | Precision (title #6) | PubMed | breast[Title] AND (man/male/men)[Title] AND (choroid*/uveal/ocular/eye/intraocular)[Title] | 23 |
 | Case-report filter | PubMed | (male breast …) AND (uveal/ocular …) AND metastasis AND Case Reports[PT] | 131 |
 | **Focused** | **Scopus** | **TITLE-ABS-KEY(("male breast" OR breast W/3 (man OR men OR male)) AND (choroid* OR uveal OR uvea) AND metasta*)** | **34** |
-| Prepared | Web of Science | TS=(("male breast" OR breast NEAR/3 (man OR men OR male)) AND (choroid* OR uveal OR uvea) AND metasta*) | pending |
+| **Focused** | **Web of Science** | **TS=(("male breast" OR breast NEAR/3 (man OR men OR male)) AND (choroid* OR uveal OR uvea) AND metasta*)** | **17** |
 
 **Scopus screening outcome:** 34 records → 18 duplicates of PubMed includes; ~14 excluded (reviews/book chapters, non-breast primaries, reverse-direction melanoma, general/mixed-sex cohorts); **2 new includes** (Cohen et al. 2005 [PubMed-indexed but missed by title filter]; Tassinari et al. 1991 [not in PubMed]).
+
+**Web of Science screening outcome:** 17 records → 12 duplicates of included reports; 5 excluded (1 review, 1 gastrointestinal and 1 thyroid primary, 2 general/mixed-sex cohorts); **0 new includes** — convergent validation that ascertainment is approaching saturation.
 
 Backward citation chaining from Hood et al. (2011) and Lam et al. (2006) (both include literature reviews) confirmed the older case set (Pillat 1952 – Silvestris 2003).
 
