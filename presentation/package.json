@@ -1,0 +1,16 @@
+{
+  "name": "lal-presentation",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "The Light Adjustable Lens (LAL) — an 8-minute Slidev presentation",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.0.0",
+    "@slidev/theme-seriph": "^0.25.0"
+  }
+}
