@@ -3,3 +3,7 @@ dist/
 .slidev/
 *.log
 .DS_Store
+
+# Generated exports (regenerate with `npm run export`)
+*.pdf
+*.pptx
