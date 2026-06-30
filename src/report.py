@@ -215,8 +215,10 @@ def run_demo(out: Path) -> int:
     # also emit the derived CSVs so reviewers can inspect them
     _write_csv(tested, TESTED_FIELDS, Path("outputs/tested_models.csv"))
     _write_csv(review, REVIEW_FIELDS, Path("data/review_queue.csv"))
-    write_metrics(compute_metrics(records, tested, spine_rows, genindex),
-                  Path("outputs/metrics.csv"))
+    metrics_rows = compute_metrics(records, tested, spine_rows, genindex)
+    write_metrics(metrics_rows, Path("outputs/metrics.csv"))
+    from src.analysis import run_analysis
+    run_analysis(metrics_rows, Path("outputs"))
     Path("outputs").mkdir(exist_ok=True)
     with (Path("outputs/records.csv")).open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=RECORD_FIELDS)

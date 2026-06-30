@@ -8,7 +8,7 @@ SEED ?= 1729
 
 .DEFAULT_GOAL := help
 
-.PHONY: help setup setup-analysis genindex fetch parse extract metrics report pilot demo test all clean
+.PHONY: help setup setup-analysis genindex fetch parse extract metrics report analysis pilot demo test all clean
 
 help:
 	@echo "Targets:"
@@ -21,6 +21,7 @@ help:
 	@echo "  extract         Map tested models -> spine IDs; route unresolved -> review_queue"
 	@echo "  metrics         Compute model age / generational_lag / availability"
 	@echo "  report          Build outputs/pilot_report.md from parsed + extracted records"
+	@echo "  analysis        Distributions, generational_lag~epub_year trend, kappa, figures"
 	@echo "  pilot           genindex -> fetch -> parse -> extract -> metrics -> report (needs network)"
 	@echo "  demo            Run parse+extract+report on bundled fixtures (no network)"
 	@echo "  all             Full reproducible run (needs network)"
@@ -59,6 +60,9 @@ report:
 		--review data/review_queue.csv --genindex data/generation_index.csv \
 		--out outputs/pilot_report.md
 
+analysis:
+	$(PY) -m src.analysis --metrics outputs/metrics.csv --out outputs --figures
+
 pilot: genindex fetch parse extract metrics report
 	@echo "Pilot complete -> outputs/pilot_report.md"
 
@@ -66,7 +70,7 @@ demo: genindex
 	$(PY) -m src.report --demo --out outputs/pilot_report.md
 	@echo "Fixture demo complete -> outputs/pilot_report.md"
 
-all: genindex fetch parse extract metrics report
+all: genindex fetch parse extract metrics report analysis
 	@echo "Full run complete."
 
 clean:
