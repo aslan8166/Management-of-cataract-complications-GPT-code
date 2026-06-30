@@ -21,6 +21,7 @@ from pathlib import Path
 from src.build_generation_index import build_generation_index
 from src.extract_models import (REVIEW_FIELDS, TESTED_FIELDS, extract_from_records,
                                 _write_csv)
+from src.metrics import METRIC_FIELDS, compute_metrics, write_metrics
 from src.parse_dates import RECORD_FIELDS, parse_file
 from src.spine import load_spine
 
@@ -129,7 +130,27 @@ def build_report(records, spine_rows, genindex, *, source_note: str) -> tuple[st
         L += _table(review_cat, len(review), "category")
     L.append("")
 
-    L.append("## 5. Generation index")
+    metrics = compute_metrics(records, tested, spine_rows, genindex)
+    anomalies = [m for m in metrics if m["tested_before_release"] is True]
+    L.append("## 5. Derived metrics (per resolved tested-model)")
+    L.append(f"- Rows (paper × resolved model): **{len(metrics)}**; "
+             f"`tested_before_release` anomalies: {len(anomalies)}.")
+    if metrics:
+        L.append("")
+        L.append("| pmid | model | age@epub (d) | gen_lag | unavailable | flags |")
+        L.append("| --- | --- | ---: | ---: | :---: | --- |")
+        for m in metrics:
+            L.append(f"| {m['pmid']} | {m['spine_id']} | "
+                     f"{m['model_age_at_epub_days']} | {m['generational_lag']} | "
+                     f"{m['unavailable_at_epub']} | {m['flags']} |")
+    L.append("")
+    L.append("> `gen_lag` = same-family generation units released after the tested "
+             "model but before the paper's Epub. `unavailable` is computed on "
+             "closed-API models only (open-weights never unavailable; suspended "
+             "flagged separately).")
+    L.append("")
+
+    L.append("## 6. Generation index")
     L.append(f"- Frozen units per family: {dict(gen_by_fam)} "
              f"(total {len(genindex)}).")
     if prov_units:
@@ -145,7 +166,7 @@ def build_report(records, spine_rows, genindex, *, source_note: str) -> tuple[st
                  + ("…" if len(nonvendor_units) > 6 else "") + ").")
     L.append("")
 
-    L.append("## 6. Assumptions & flags (review before scaling)")
+    L.append("## 7. Assumptions & flags (review before scaling)")
     for a in ASSUMPTIONS:
         L.append(f"- {a}")
     L.append("")
@@ -194,6 +215,8 @@ def run_demo(out: Path) -> int:
     # also emit the derived CSVs so reviewers can inspect them
     _write_csv(tested, TESTED_FIELDS, Path("outputs/tested_models.csv"))
     _write_csv(review, REVIEW_FIELDS, Path("data/review_queue.csv"))
+    write_metrics(compute_metrics(records, tested, spine_rows, genindex),
+                  Path("outputs/metrics.csv"))
     Path("outputs").mkdir(exist_ok=True)
     with (Path("outputs/records.csv")).open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=RECORD_FIELDS)

@@ -8,7 +8,7 @@ SEED ?= 1729
 
 .DEFAULT_GOAL := help
 
-.PHONY: help setup setup-analysis genindex fetch parse extract report pilot demo test all clean
+.PHONY: help setup setup-analysis genindex fetch parse extract metrics report pilot demo test all clean
 
 help:
 	@echo "Targets:"
@@ -19,8 +19,9 @@ help:
 	@echo "  fetch           Pull the PILOT_N-PMID pilot from NCBI (needs egress to eutils)"
 	@echo "  parse           Parse epub/edat/received/accepted from the latest raw snapshot"
 	@echo "  extract         Map tested models -> spine IDs; route unresolved -> review_queue"
+	@echo "  metrics         Compute model age / generational_lag / availability"
 	@echo "  report          Build outputs/pilot_report.md from parsed + extracted records"
-	@echo "  pilot           genindex -> fetch -> parse -> extract -> report (Stage 0, needs network)"
+	@echo "  pilot           genindex -> fetch -> parse -> extract -> metrics -> report (needs network)"
 	@echo "  demo            Run parse+extract+report on bundled fixtures (no network)"
 	@echo "  all             Full reproducible run (needs network)"
 	@echo "  clean           Remove derived outputs (keeps data/raw snapshots)"
@@ -48,19 +49,24 @@ extract:
 	$(PY) -m src.extract_models --records outputs/records.csv --spine data/model_spine.csv \
 		--out outputs/tested_models.csv --review data/review_queue.csv
 
+metrics:
+	$(PY) -m src.metrics --records outputs/records.csv --tested outputs/tested_models.csv \
+		--spine data/model_spine.csv --genindex data/generation_index.csv \
+		--out outputs/metrics.csv
+
 report:
 	$(PY) -m src.report --records outputs/records.csv --tested outputs/tested_models.csv \
 		--review data/review_queue.csv --genindex data/generation_index.csv \
 		--out outputs/pilot_report.md
 
-pilot: genindex fetch parse extract report
+pilot: genindex fetch parse extract metrics report
 	@echo "Pilot complete -> outputs/pilot_report.md"
 
 demo: genindex
 	$(PY) -m src.report --demo --out outputs/pilot_report.md
 	@echo "Fixture demo complete -> outputs/pilot_report.md"
 
-all: genindex fetch parse extract report
+all: genindex fetch parse extract metrics report
 	@echo "Full run complete."
 
 clean:
