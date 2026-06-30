@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic PubMed efetch fixture for Arm 1 engine tests. NOT real records.
+     Crafted to exercise the date-priority logic and first-pass model extraction. -->
+<PubmedArticleSet>
+
+  <!-- R1: clean ArticleDate[Electronic]; ChatGPT (unversioned) + GPT-4 (unresolved) -->
+  <PubmedArticle>
+    <MedlineCitation Status="Publisher">
+      <PMID Version="1">30000001</PMID>
+      <Article PubModel="Print-Electronic">
+        <Journal>
+          <Title>Journal of Ophthalmology Test</Title>
+          <ISOAbbreviation>J Ophthalmol Test</ISOAbbreviation>
+          <JournalIssue><PubDate><Year>2024</Year><Month>04</Month></PubDate></JournalIssue>
+        </Journal>
+        <ArticleTitle>Evaluating ChatGPT and GPT-4 in glaucoma triage.</ArticleTitle>
+        <Abstract><AbstractText>We tested ChatGPT and GPT-4 on ophthalmology board questions.</AbstractText></Abstract>
+        <ArticleDate DateType="Electronic"><Year>2024</Year><Month>03</Month><Day>15</Day></ArticleDate>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="received"><Year>2023</Year><Month>12</Month><Day>01</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="accepted"><Year>2024</Year><Month>02</Month><Day>20</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="epublish"><Year>2024</Year><Month>03</Month><Day>15</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="entrez"><Year>2024</Year><Month>03</Month><Day>16</Day></PubMedPubDate>
+      </History>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">30000001</ArticleId>
+        <ArticleId IdType="doi">10.0000/test.1</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+
+  <!-- R2: missing ArticleDate -> falls back to History[epublish]; GPT-4o mini (resolved) -->
+  <PubmedArticle>
+    <MedlineCitation Status="Publisher">
+      <PMID Version="1">30000002</PMID>
+      <Article PubModel="Electronic">
+        <Journal>
+          <Title>Retina Research Letters</Title>
+          <ISOAbbreviation>Retina Res Lett</ISOAbbreviation>
+          <JournalIssue><PubDate><Year>2023</Year></PubDate></JournalIssue>
+        </Journal>
+        <ArticleTitle>GPT-4o mini for diabetic retinopathy screening.</ArticleTitle>
+        <Abstract><AbstractText>GPT-4o mini was assessed on fundus images.</AbstractText></Abstract>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="received"><Year>2023</Year><Month>09</Month><Day>10</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="accepted"><Year>2023</Year><Month>10</Month><Day>30</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="epublish"><Year>2023</Year><Month>11</Month><Day>06</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="entrez"><Year>2023</Year><Month>11</Month><Day>07</Day></PubMedPubDate>
+      </History>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">30000002</ArticleId>
+        <ArticleId IdType="doi">10.0000/test.2</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+
+  <!-- R3: partial date (Year+Month name), no ArticleDate, no epublish; Gemini 1.5 Pro (resolved) -->
+  <PubmedArticle>
+    <MedlineCitation Status="MEDLINE">
+      <PMID Version="1">30000003</PMID>
+      <Article PubModel="Print">
+        <Journal>
+          <Title>Ocular Imaging Today</Title>
+          <ISOAbbreviation>Ocul Imaging Today</ISOAbbreviation>
+          <JournalIssue><PubDate><Year>2024</Year><Month>Mar</Month></PubDate></JournalIssue>
+        </Journal>
+        <ArticleTitle>Gemini 1.5 Pro in retinal OCT interpretation.</ArticleTitle>
+        <Abstract><AbstractText>Gemini 1.5 Pro analyzed macular OCT scans.</AbstractText></Abstract>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="received"><Year>2024</Year><Month>01</Month><Day>10</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="entrez"><Year>2024</Year><Month>03</Month><Day>20</Day></PubMedPubDate>
+      </History>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">30000003</ArticleId>
+        <ArticleId IdType="doi">10.0000/test.3</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+
+  <!-- R4: MedlineDate string fallback; Claude 3.5 Sonnet (ambiguous -> review) -->
+  <PubmedArticle>
+    <MedlineCitation Status="MEDLINE">
+      <PMID Version="1">30000004</PMID>
+      <Article PubModel="Print">
+        <Journal>
+          <Title>Cornea and External Disease</Title>
+          <ISOAbbreviation>Cornea Ext Dis</ISOAbbreviation>
+          <JournalIssue><PubDate><MedlineDate>2024 Mar-Apr</MedlineDate></PubDate></JournalIssue>
+        </Journal>
+        <ArticleTitle>Claude 3.5 Sonnet versus ophthalmologists in triage.</ArticleTitle>
+        <Abstract><AbstractText>We compared Claude 3.5 Sonnet to clinicians.</AbstractText></Abstract>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="entrez"><Year>2024</Year><Month>04</Month><Day>01</Day></PubMedPubDate>
+      </History>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">30000004</ArticleId>
+        <ArticleId IdType="doi">10.0000/test.4</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+
+  <!-- R5: clean ArticleDate; exact snapshot gpt-4o-2024-05-13 in abstract (resolved) -->
+  <PubmedArticle>
+    <MedlineCitation Status="Publisher">
+      <PMID Version="1">30000005</PMID>
+      <Article PubModel="Print-Electronic">
+        <Journal>
+          <Title>Uveitis Journal</Title>
+          <ISOAbbreviation>Uveitis J</ISOAbbreviation>
+          <JournalIssue><PubDate><Year>2025</Year><Month>02</Month></PubDate></JournalIssue>
+        </Journal>
+        <ArticleTitle>Benchmarking gpt-4o-2024-05-13 on uveitis vignettes.</ArticleTitle>
+        <Abstract><AbstractText>The model gpt-4o-2024-05-13 was evaluated against experts.</AbstractText></Abstract>
+        <ArticleDate DateType="Electronic"><Year>2025</Year><Month>02</Month><Day>20</Day></ArticleDate>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="received"><Year>2024</Year><Month>11</Month><Day>05</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="accepted"><Year>2025</Year><Month>01</Month><Day>15</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="epublish"><Year>2025</Year><Month>02</Month><Day>20</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="entrez"><Year>2025</Year><Month>02</Month><Day>21</Day></PubMedPubDate>
+      </History>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">30000005</ArticleId>
+        <ArticleId IdType="doi">10.0000/test.5</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+
+  <!-- R6: year-only PubDate; o1-preview (resolved) + ChatGPT (unversioned) -> partial -->
+  <PubmedArticle>
+    <MedlineCitation Status="MEDLINE">
+      <PMID Version="1">30000006</PMID>
+      <Article PubModel="Print">
+        <Journal>
+          <Title>Cornea Reports</Title>
+          <ISOAbbreviation>Cornea Rep</ISOAbbreviation>
+          <JournalIssue><PubDate><Year>2023</Year></PubDate></JournalIssue>
+        </Journal>
+        <ArticleTitle>o1-preview and ChatGPT for corneal disease questions.</ArticleTitle>
+        <Abstract><AbstractText>o1-preview and ChatGPT were tested on corneal cases.</AbstractText></Abstract>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="entrez"><Year>2023</Year><Month>06</Month><Day>15</Day></PubMedPubDate>
+      </History>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">30000006</ArticleId>
+        <ArticleId IdType="doi">10.0000/test.6</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+
+  <!-- R7: clean ArticleDate; Llama 3.1 (resolved) + bare Claude (family_only) -> partial -->
+  <PubmedArticle>
+    <MedlineCitation Status="Publisher">
+      <PMID Version="1">30000007</PMID>
+      <Article PubModel="Electronic">
+        <Journal>
+          <Title>Ocular Surface AI</Title>
+          <ISOAbbreviation>Ocul Surf AI</ISOAbbreviation>
+          <JournalIssue><PubDate><Year>2024</Year><Month>07</Month></PubDate></JournalIssue>
+        </Journal>
+        <ArticleTitle>Llama 3.1 and Claude for ocular surface disease.</ArticleTitle>
+        <Abstract><AbstractText>Llama 3.1 and Claude were assessed on dry eye scenarios.</AbstractText></Abstract>
+        <ArticleDate DateType="Electronic"><Year>2024</Year><Month>07</Month><Day>01</Day></ArticleDate>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="epublish"><Year>2024</Year><Month>07</Month><Day>01</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="entrez"><Year>2024</Year><Month>07</Month><Day>02</Day></PubMedPubDate>
+      </History>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">30000007</ArticleId>
+        <ArticleId IdType="doi">10.0000/test.7</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+
+  <!-- R8: clean ArticleDate; no spine model named (generic chatbot) -> no_model_detected -->
+  <PubmedArticle>
+    <MedlineCitation Status="Publisher">
+      <PMID Version="1">30000008</PMID>
+      <Article PubModel="Electronic">
+        <Journal>
+          <Title>Patient Education in Ophthalmology</Title>
+          <ISOAbbreviation>Patient Educ Ophthalmol</ISOAbbreviation>
+          <JournalIssue><PubDate><Year>2025</Year><Month>05</Month></PubDate></JournalIssue>
+        </Journal>
+        <ArticleTitle>A chatbot for macular degeneration education.</ArticleTitle>
+        <Abstract><AbstractText>A generative AI chatbot answered patient questions about macular degeneration.</AbstractText></Abstract>
+        <ArticleDate DateType="Electronic"><Year>2025</Year><Month>05</Month><Day>01</Day></ArticleDate>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <History>
+        <PubMedPubDate PubStatus="epublish"><Year>2025</Year><Month>05</Month><Day>01</Day></PubMedPubDate>
+        <PubMedPubDate PubStatus="entrez"><Year>2025</Year><Month>05</Month><Day>02</Day></PubMedPubDate>
+      </History>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">30000008</ArticleId>
+        <ArticleId IdType="doi">10.0000/test.8</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+
+</PubmedArticleSet>

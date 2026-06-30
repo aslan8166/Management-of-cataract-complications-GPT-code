@@ -1,0 +1,43 @@
+family,generation_index,minor_version,first_release_date,first_release_precision,n_models_collapsed,member_model_ids,provisional,non_vendor_source,notes
+Anthropic,1,claude-1,2023-03-14,day,1,claude-1,True,False,PROVISIONAL: 'confirm on vendor blog' flagged member(s)
+Anthropic,2,claude-2,2023-07-11,day,1,claude-2.0,False,False,
+Anthropic,3,claude-2.1,2023-11-21,day,1,claude-2.1,False,False,
+Anthropic,4,claude-3,2024-03-04,day,3,claude-3-haiku-20240307|claude-3-opus-20240229|claude-3-sonnet-20240229,False,False,
+Anthropic,5,claude-3.5,2024-06-20,day,3,claude-3-5-haiku-20241022|claude-3-5-sonnet-20240620|claude-3-5-sonnet-20241022,False,False,
+Anthropic,6,claude-3.7,2025-02-24,day,1,claude-3-7-sonnet-20250219,False,False,
+Anthropic,7,claude-4,2025-05-22,day,2,claude-opus-4-20250514|claude-sonnet-4-20250514,False,False,
+Anthropic,8,claude-4.1,2025-08-05,day,1,claude-opus-4-1-20250805,False,False,
+Anthropic,9,claude-4.5,2025-09-29,day,3,claude-haiku-4-5-20251001|claude-opus-4-5|claude-sonnet-4-5-20250929,False,True,release date from non-vendor source (Wikipedia/third-party)
+Anthropic,10,claude-4.6,2026-02-05,day,2,claude-opus-4-6|claude-sonnet-4-6,False,True,release date from non-vendor source (Wikipedia/third-party)
+Anthropic,11,claude-5-mythos-class,2026-04-07,day,3,claude-fable-5|claude-mythos-5|claude-mythos-preview,False,False,"UNVERIFIED ordering: Fable/Mythos class, suspended/export-controlled"
+Anthropic,12,claude-4.7,2026-04-16,day,1,claude-opus-4-7,False,True,release date from non-vendor source (Wikipedia/third-party)
+Anthropic,13,claude-4.8,2026-05-01,month,1,claude-opus-4-8,True,True,PROVISIONAL: 'confirm on vendor blog' flagged member(s); release date from non-vendor source (Wikipedia/third-party)
+Google,1,bard,2023-03-21,day,1,bard,True,True,PROVISIONAL: 'confirm on vendor blog' flagged member(s); release date from non-vendor source (Wikipedia/third-party)
+Google,2,palm-2,2023-05-10,day,1,text-bison,False,True,release date from non-vendor source (Wikipedia/third-party)
+Google,3,gemini-1.0,2023-12-06,day,2,gemini-1.0-pro|gemini-1.0-ultra,False,True,release date from non-vendor source (Wikipedia/third-party)
+Google,4,gemini-1.5,2024-02-15,day,2,gemini-1.5-flash|gemini-1.5-pro,True,True,PROVISIONAL: 'confirm on vendor blog' flagged member(s); release date from non-vendor source (Wikipedia/third-party)
+Google,5,gemini-2.0,2024-12-11,day,1,gemini-2.0-flash,False,True,release date from non-vendor source (Wikipedia/third-party)
+Google,6,gemini-2.5,2025-03-25,day,2,gemini-2.5-flash|gemini-2.5-pro,False,True,release date from non-vendor source (Wikipedia/third-party)
+Google,7,gemini-3,2025-11-18,day,1,gemini-3-pro,False,True,release date from non-vendor source (Wikipedia/third-party)
+Meta,1,llama-1,2023-02-24,day,1,llama-7b/13b/65b,False,True,release date from non-vendor source (Wikipedia/third-party); open-weights (never 'unavailable')
+Meta,2,llama-2,2023-07-18,day,1,llama-2-7b/13b/70b,False,False,open-weights (never 'unavailable')
+Meta,3,llama-3,2024-04-18,day,1,llama-3-8b/70b,False,False,open-weights (never 'unavailable')
+Meta,4,llama-3.1,2024-07-23,day,1,llama-3.1-8b/70b/405b,False,False,open-weights (never 'unavailable')
+Meta,5,llama-3.2,2024-09-25,day,1,llama-3.2-1b/3b/11b-vision/90b-vision,False,False,open-weights (never 'unavailable')
+Meta,6,llama-3.3,2024-12-06,day,1,llama-3.3-70b,False,False,open-weights (never 'unavailable')
+Meta,7,llama-4,2025-04-05,day,1,llama-4-scout/maverick,False,False,open-weights (never 'unavailable')
+OpenAI,1,gpt-3.5,2022-11-30,day,5,chatgpt-consumer|gpt-3.5-turbo-0125|gpt-3.5-turbo-0301|gpt-3.5-turbo-0613|gpt-3.5-turbo-1106,True,False,PROVISIONAL: 'confirm on vendor blog' flagged member(s)
+OpenAI,2,gpt-4,2023-03-14,day,7,gpt-4-0125-preview|gpt-4-0314|gpt-4-0613|gpt-4-1106-preview|gpt-4-32k|gpt-4-turbo-2024-04-09|gpt-4-vision-preview,False,False,
+OpenAI,3,gpt-4o,2024-05-13,day,5,chatgpt-4o-latest|gpt-4o-2024-05-13|gpt-4o-2024-08-06|gpt-4o-2024-11-20|gpt-4o-mini-2024-07-18,False,False,
+OpenAI,4,o1,2024-09-12,day,3,o1-2024-12-17|o1-mini-2024-09-12|o1-preview-2024-09-12,False,False,
+OpenAI,5,o3,2025-01-31,day,3,o3-2025-04-16|o3-mini-2025-01-31|o3-pro-2025-06-10,False,False,
+OpenAI,6,gpt-4.5,2025-02-27,day,1,gpt-4.5-preview,False,False,
+OpenAI,7,gpt-4.1,2025-04-14,day,1,gpt-4.1-2025-04-14,False,False,
+OpenAI,8,o4,2025-04-16,day,1,o4-mini-2025-04-16,False,False,
+OpenAI,9,gpt-5,2025-08-07,day,2,gpt-5-2025-08-07|gpt-5-pro-2025-10-06,False,False,
+OpenAI,10,gpt-5.1,2025-11-01,month,1,gpt-5.1,True,False,PROVISIONAL: 'confirm on vendor blog' flagged member(s)
+OpenAI,11,gpt-5.2,2025-12-11,day,1,gpt-5.2,False,True,release date from non-vendor source (Wikipedia/third-party)
+OpenAI,12,gpt-5.3,2026-02-01,month,1,gpt-5.3,False,True,release date from non-vendor source (Wikipedia/third-party)
+OpenAI,13,gpt-5.4,2026-03-05,day,1,gpt-5.4,False,True,release date from non-vendor source (Wikipedia/third-party)
+OpenAI,14,gpt-5.5,2026-04-23,day,1,gpt-5.5,False,False,
+OpenAI,15,gpt-5.6,2026-06-26,day,1,gpt-5.6-sol,False,False,

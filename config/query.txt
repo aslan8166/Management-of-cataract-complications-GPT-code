@@ -1,0 +1,12 @@
+# PubMed Boolean query — Ophthalmology LLM Temporal-Validity Study (Arm 1)
+# Human-supplied / approved. Lines beginning with '#' are comments and are ignored.
+# fetch.py normalizes internal whitespace/newlines to single spaces before sending.
+# Corpus filter window: 2022-11-01 onward (see AGENTS.md "Corpus").
+("large language model*"[tiab] OR LLM*[tiab] OR ChatGPT[tiab] OR "GPT-4"[tiab]
+ OR "GPT-3.5"[tiab] OR "GPT-5"[tiab] OR Gemini[tiab] OR Bard[tiab] OR Claude[tiab]
+ OR "generative artificial intelligence"[tiab] OR "generative AI"[tiab] OR chatbot*[tiab])
+AND
+(ophthalmolog*[tiab] OR ophthalmic[tiab] OR ocular[tiab] OR retina*[tiab]
+ OR glaucoma[tiab] OR cornea*[tiab] OR macular[tiab] OR uveitis[tiab]
+ OR vitreoretinal[tiab] OR "ophthalmology"[MeSH] OR "eye diseases"[MeSH])
+AND ("2022/11/01"[dp] : "3000"[dp])
