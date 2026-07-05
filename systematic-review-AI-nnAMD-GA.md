@@ -2,9 +2,9 @@
 
 **A PRISMA 2020–compliant systematic review**
 
-*Prepared using the Academic Research Skills systematic-review protocol (deep-research, systematic-review mode). Evidence retrieved from PubMed / PubMed Central.*
+*Prepared using the Academic Research Skills systematic-review protocol (deep-research, systematic-review mode). Evidence retrieved from PubMed / PubMed Central, with a supplementary multi-source search (Scopus/Embase/Web of Science/IEEE Xplore/arXiv/medRxiv via web interface).*
 
-**Date of search:** 5 July 2026
+**Date of search:** 5 July 2026 (PubMed) · supplementary multi-database search 5 July 2026
 
 ---
 
@@ -14,9 +14,9 @@
 
 **Objectives.** To systematically identify, appraise, and synthesize studies that develop or validate AI (machine-learning [ML] or deep-learning [DL]) models for predicting anatomical progression, treatment response, or functional outcomes in non-neovascular AMD and GA.
 
-**Methods.** We searched PubMed on 5 July 2026 using nine Boolean strategies combining AI/ML/DL terms with non-neovascular AMD / GA terms and prediction / treatment-response / functional-outcome terms. Records were screened by title and abstract against pre-specified eligibility criteria (PECO framework). We included primary studies that developed or validated an AI model with a prognostic, treatment-response, or structure–function objective in dry AMD/GA. Risk of bias was assessed with a PROBAST-informed framework adapted for prediction-model and AI studies. Findings were synthesized narratively across four domains, as the heterogeneity of models, endpoints, and metrics precluded meta-analysis.
+**Methods.** We searched PubMed on 5 July 2026 using nine Boolean strategies combining AI/ML/DL terms with non-neovascular AMD / GA terms and prediction / treatment-response / functional-outcome terms, supplemented by a web-interface search of Scopus, Embase, Web of Science, IEEE Xplore, arXiv, and medRxiv to capture engineering-venue and preprint literature. Records were screened by title and abstract against pre-specified eligibility criteria (PECO framework). We included primary studies that developed or validated an AI model with a prognostic, treatment-response, or structure–function objective in dry AMD/GA. Risk of bias was assessed with a PROBAST-informed framework adapted for prediction-model and AI studies, and reporting completeness was appraised against a TRIPOD-AI–informed checklist. Findings were synthesized narratively across four domains, as the heterogeneity of models, endpoints, and metrics precluded meta-analysis.
 
-**Results.** Twenty-five primary studies met eligibility criteria: 13 on anatomical progression prediction, 4 on treatment-response quantification, 3 on functional-outcome prediction, and 5 enabling automated-quantification studies that underpin prognostic endpoints. For GA growth-rate prediction from baseline imaging, deep-learning models reached squared Pearson correlations of ~0.47–0.65, with fundus autofluorescence (FAF) outperforming OCT and the atrophy "rim" region most informative. For predicting conversion from intermediate AMD (iAMD) to GA within one year, a convolutional neural network (DeepGAze) achieved an area under the receiver-operating-characteristic curve (AUROC) of 0.94 with 8.3–20.7-fold trial-enrichment potential. AI outperformed ophthalmologists at ranking individual GA progression speed (concordance index 0.69 vs 0.60). Deep-learning OCT segmentation quantified a pegcetacoplan treatment effect that was substantially larger on the ellipsoid zone / photoreceptor layer (≈46–78% reduction) than on retinal pigment epithelium (RPE) loss (≈20–27%), and identified the baseline ellipsoid-zone–RPE difference as a response modifier. For functional prediction, ML models estimated visual acuity (r≈0.40) and point-wise retinal sensitivity (mean absolute error 2.3–3.7 dB) from structural OCT. Risk of bias was frequently high or unclear, driven by retrospective single-cohort designs, reliance on clinical-trial populations, limited external validation, and heterogeneous outcome definitions.
+**Results.** Twenty-seven primary studies met eligibility criteria: 15 on anatomical progression prediction, 4 on treatment-response quantification, 3 on functional-outcome prediction, and 5 enabling automated-quantification studies that underpin prognostic endpoints. The supplementary multi-database search added two peer-reviewed progression studies not surfaced by PubMed relevance ranking (a four-approach 3D-OCT comparison and a fundus-autofluorescence region-of-growth model) and identified emerging engineering-venue directions (recurrent-network concurrent atrophy forecasting; explainable neuro-symbolic/LLM frameworks; biologically grounded Gompertz growth forecasting). For GA growth-rate prediction from baseline imaging, deep-learning models reached squared Pearson correlations of ~0.47–0.65, with fundus autofluorescence (FAF) outperforming OCT and the atrophy "rim" region most informative. For predicting conversion from intermediate AMD (iAMD) to GA within one year, a convolutional neural network (DeepGAze) achieved an area under the receiver-operating-characteristic curve (AUROC) of 0.94 with 8.3–20.7-fold trial-enrichment potential. AI outperformed ophthalmologists at ranking individual GA progression speed (concordance index 0.69 vs 0.60). Deep-learning OCT segmentation quantified a pegcetacoplan treatment effect that was substantially larger on the ellipsoid zone / photoreceptor layer (≈46–78% reduction) than on retinal pigment epithelium (RPE) loss (≈20–27%), and identified the baseline ellipsoid-zone–RPE difference as a response modifier. For functional prediction, ML models estimated visual acuity (r≈0.40) and point-wise retinal sensitivity (mean absolute error 2.3–3.7 dB) from structural OCT. Risk of bias was frequently high or unclear, driven by retrospective single-cohort designs, reliance on clinical-trial populations, limited external validation, and heterogeneous outcome definitions.
 
 **Conclusions.** AI can predict GA progression and objectively quantify complement-inhibitor treatment response with performance approaching or exceeding human experts, and can link retinal structure to visual function. Evidence is nonetheless dominated by retrospective, single-center or single-trial analyses with limited prospective external validation, standardized endpoints, and fairness evaluation. Prospective, externally validated, PROBAST-adherent studies with transparent reporting (TRIPOD-AI) are required before these tools can be routinely used for patient selection, counseling, and treatment monitoring.
 
@@ -62,7 +62,7 @@ This review was conducted and reported in accordance with the Preferred Reportin
 
 ### 2.1 Protocol and registration
 
-The review was not prospectively registered on PROSPERO or OSF. It was conducted as a focused, reproducible evidence synthesis; the search date, strategies, eligibility criteria, and screening decisions are reported in full below to support reproducibility. The absence of prospective registration and of dual independent screening are acknowledged as deviations from the ideal protocol (Section 5.4).
+The review was not prospectively registered on PROSPERO or OSF. It was conducted as a focused, reproducible evidence synthesis; the search date, strategies, eligibility criteria, and screening decisions are reported in full below to support reproducibility. The absence of prospective registration and of dual independent screening are acknowledged as deviations from the ideal protocol (Section 4.4).
 
 ### 2.2 Eligibility criteria
 
@@ -83,13 +83,13 @@ The review was not prospectively registered on PROSPERO or OSF. It was conducted
 
 ### 2.3 Information sources and search strategy
 
-We searched **PubMed / PubMed Central** on **5 July 2026** via a programmatic interface (PubMed MCP server). Gray-literature and multi-database (Scopus, Web of Science, Embase) searching were not performed; this is a stated limitation. Nine Boolean strategies were executed, combining three concept blocks with AND, and synonyms within blocks with OR:
+We searched **PubMed / PubMed Central** on **5 July 2026** via a programmatic interface (PubMed MCP server). This was **supplemented by a web-interface search of Scopus, Embase, Web of Science, IEEE Xplore, arXiv, and medRxiv** on the same date, to capture engineering-venue and preprint literature that PubMed does not index or does not surface in relevance-ranked retrieval. Direct API access to the subscription databases (Scopus/Embase/Web of Science) was not available; they were queried through their public/web-indexed interfaces, and this partial coverage is disclosed as a limitation. Nine Boolean strategies were executed on PubMed, combining three concept blocks with AND, and synonyms within blocks with OR:
 
 - **Block 1 (AI):** "artificial intelligence" OR "machine learning" OR "deep learning" OR "convolutional neural network"
 - **Block 2 (Disease):** "geographic atrophy" OR "dry AMD" OR "non-neovascular AMD" OR "non-exudative AMD" OR "intermediate AMD" OR "age-related macular degeneration"
 - **Block 3 (Task):** "progression" OR "prediction" OR "growth rate" OR "conversion" OR "treatment response" OR "pegcetacoplan" OR "avacincaptad" OR "complement" OR "visual acuity" OR "microperimetry" OR "retinal sensitivity" OR "functional outcome"
 
-Representative executed queries and their yields are listed in **Appendix A**. PubMed automatic term mapping (MeSH expansion) was retained. Results were sorted by relevance.
+Representative executed queries and their yields are listed in **Appendix A**. PubMed automatic term mapping (MeSH expansion) was retained. Results were sorted by relevance. The supplementary multi-database search used the same three concept blocks phrased as free-text web queries (e.g., "deep learning geographic atrophy growth rate prediction OCT IEEE arXiv"; "machine learning predict progression geographic atrophy treatment response Scopus Embase"). New candidate records identified this way were subjected to the same eligibility screening and, where indexed in PubMed/PMC, verified and cited with their DOIs.
 
 ### 2.4 Selection process
 
@@ -113,35 +113,40 @@ Because the included studies differed fundamentally in prediction task, endpoint
 
 ### 3.1 Study selection (PRISMA flow)
 
-The nine PubMed searches returned **911 citation hits** (with substantial overlap). After deduplication by PMID, approximately **620 unique records** were screened by title and abstract. Sixty-eight records were assessed in detail at the full-abstract/metadata level. Of these, **25 primary studies** met all eligibility criteria and were included in the qualitative synthesis. Approximately 15 narrative reviews and 3 prior systematic reviews were retained separately as background/context but were not counted among included primary studies. Records were excluded at full assessment predominantly because the population or predicted endpoint was neovascular AMD, another retinal disease, or diagnosis/classification without a prognostic objective.
+The nine PubMed searches returned **911 citation hits** (with substantial overlap). After deduplication by PMID, approximately **620 unique records** were screened by title and abstract. The supplementary multi-database web search contributed a further **~40 records** (Scopus/Embase/Web of Science/IEEE Xplore/arXiv/medRxiv), of which 6 were advanced for detailed assessment. Across both streams, **74 records** were assessed in detail at the full-abstract/metadata level. Of these, **27 primary studies** met all eligibility criteria and were included in the qualitative synthesis (25 from PubMed; 2 added by the supplementary search). Approximately 15 narrative reviews and 3 prior systematic reviews were retained separately as background/context, and 3 preprint/emerging-method records (recurrent-network atrophy forecasting; explainable neuro-symbolic/LLM framework; Gompertz growth forecasting) are discussed as emerging directions but were not counted among included studies. Records were excluded at full assessment predominantly because the population or predicted endpoint was neovascular AMD, another retinal disease, or diagnosis/classification without a prognostic objective.
 
 **Figure 1. PRISMA 2020 flow diagram.**
 
 ```
 IDENTIFICATION
   Records identified — PubMed (9 Boolean searches, 5 Jul 2026):  n = 911
-  Records removed before screening (duplicates by PMID):         n ≈ 291
+  Records identified — supplementary multi-database web search:  n ≈ 40
+     (Scopus, Embase, Web of Science, IEEE Xplore, arXiv, medRxiv)
+  Records removed before screening (duplicates by PMID/title):   n ≈ 300
                                                                   │
 SCREENING                                                         ▼
-  Unique records screened (title/abstract):                      n ≈ 620
-  Records excluded at title/abstract:                            n ≈ 552
+  Unique records screened (title/abstract):                      n ≈ 651
+  Records excluded at title/abstract:                            n ≈ 577
                                                                   │
-  Reports assessed for eligibility (full abstract/metadata):     n = 68  ▼
-  Reports excluded, with reasons:                                n = 43
+  Reports assessed for eligibility (full abstract/metadata):     n = 74  ▼
+  Reports excluded, with reasons:                                n = 47
      • Neovascular AMD population/endpoint only:                 n ≈ 12
      • Diagnosis/classification only (no prognostic task):       n ≈ 11
      • Non-AMD retinal disease:                                  n ≈ 5
      • Narrative review / editorial / secondary synthesis:       n ≈ 15
+     • Preprint/emerging-method (discussed, not counted):        n ≈ 3
+     • Other (non-separable mixed cohort, protocol only):        n ≈ 1
                                                                   │
 INCLUDED                                                          ▼
-  Primary studies included in synthesis:                         n = 25
-     • Domain A – Anatomical progression prediction:             n = 13
+  Primary studies included in synthesis:                         n = 27
+     (PubMed n = 25; supplementary multi-database search n = 2)
+     • Domain A – Anatomical progression prediction:             n = 15
      • Domain B – Treatment-response quantification:             n = 4
      • Domain C – Functional-outcome prediction:                 n = 3
      • Domain D – Enabling automated quantification:             n = 5
 ```
 
-*(Counts at the screening stage are approximate because relevance-ranked retrieval, rather than exhaustive export of all 620 records, was used; see Section 5.4.)*
+*(Counts at the screening stage are approximate because relevance-ranked retrieval, rather than exhaustive export of all records, was used; see Section 4.4.)*
 
 ### 3.2 Characteristics of included studies
 
@@ -165,6 +170,8 @@ Included studies were published between 2018 and 2026. Most were retrospective a
 | A11 | (GAN future fundus) 2022 | Comput Methods Programs Biomed | Synthesize future fundus for early AMD | Fundus images | Generative adversarial network | Feasibility of future-image generation | Internal |
 | A12 | AI vs expert 2024 | Ophthalmol Retina | Rank individual GA progression speed | FILLY sham/fellow (134 eyes) | DL on baseline OCT vs 4 ophthalmologists | AI c-index 0.69 vs experts 0.60; κ 0.23 vs ≤0.18 | Prospective comparison |
 | A13 | Bhuiyan et al. 2020 | Transl Vis Sci Technol | Predict progression to late AMD (1–2 y) | AREDS (train) → NAT-2 (external) | DL ensemble + logistic model tree | 2-y late-AMD prediction accuracy 86.4% (84% external) | External (NAT-2) |
+| A14 † | Salvi et al. 2024 | Ophthalmol Sci | 1-year FAF region-of-growth of GA | Lampalizumab trials (597 pts; 310/78/209 split) | 2D U-Net (whole-lesion & multiclass) | Dice 0.70; r=0.79 (test) using baseline+6-mo FAF | Train/val/test split |
+| A15 † | Yoshida et al. 2025 | Transl Vis Sci Technol | GA area & growth-rate from 3D OCT (4 approaches) | Lampalizumab trials (1219 dev / 442 holdout) | En-face maps / SLIVER-net / 3D CNN / layer maps | Growth-rate r²≈0.33–0.35 (all approaches ≈ plateau); EZ+RPE layers most informative | Holdout |
 | **Domain B — Treatment-response quantification** ||||||||
 | B1 | Riedl et al. 2022 | Ophthalmol Retina | Topographic pegcetacoplan response | FILLY (156 eyes, 312 scans) | DL segmentation + spatial GAMM | LPR ↓28.0% (monthly), ↓23.9% (EOM) vs sham; greater near fovea | Post-hoc RCT |
 | B2 | Mai/Reiter et al. 2024 | Ophthalmology | RPE vs EZ response to pegcetacoplan | OAKS + DERBY phase 3 (897 eyes) | DL RPE/EZ segmentation | EZ-loss ↓47–53% vs RPE-loss ↓20–27%; EZ-RPE gap modifies response | Post-hoc RCT |
@@ -181,7 +188,7 @@ Included studies were published between 2018 and 2026. Most were retrospective a
 | D4 | (EZ & RPE-BM segmentation) 2026 | Diagnostics | Quantify EZ & RPE-BM complex in GA | 30 GA + 30 healthy | DL segmentation | Validated automated sublayer quantification | Internal |
 | D5 | (NIR reflectance GA) 2025 | Retina | Detect GA on near-infrared reflectance | NIR images | DL | Fully automated GA detection on NIR | Internal |
 
-*Full citations with DOI links appear in Section 8 (References).*
+*† A14 and A15 were identified by the supplementary multi-database search. Full citations with DOI links appear in Section 9 (References).*
 
 ### 3.3 Risk-of-bias assessment
 
@@ -191,7 +198,7 @@ Included studies were published between 2018 and 2026. Most were retrospective a
 
 | Domain | Participants | Predictors | Outcome | Analysis | Overall |
 |---|---|---|---|---|---|
-| A. Progression (n=13) | 🟡 Unclear/High (trial or single-center cohorts) | 🟢 Low (standardized imaging) | 🟡 Mixed (heterogeneous GA/VA-loss definitions) | 🔴 High (limited external validation, two-eye correlation) | 🟡→🔴 |
+| A. Progression (n=15) | 🟡 Unclear/High (trial or single-center cohorts) | 🟢 Low (standardized imaging) | 🟡 Mixed (heterogeneous GA/VA-loss definitions) | 🔴 High (limited external validation, two-eye correlation) | 🟡→🔴 |
 | B. Treatment response (n=4) | 🟢 Low (randomized parent trials) | 🟢 Low | 🟢 Low (protocol endpoints) | 🟡 Unclear (post-hoc, AI-quantifier not always externally validated) | 🟡 |
 | C. Functional (n=3) | 🟡 Unclear (small n; C3=37 eyes) | 🟢 Low | 🟡 Mixed (VA/LLVA/microperimetry) | 🟡 Unclear (limited external validation) | 🟡 |
 | D. Enabling quantification (n=5) | 🟢–🟡 | 🟢 Low | 🟢 Low (expert-consensus reference) | 🟢–🟡 (D1, D3 externally validated; others internal) | 🟢→🟡 |
@@ -212,7 +219,7 @@ Legend: 🟢 low concern; 🟡 unclear/some concern; 🔴 high concern.
 
 Anatomical progression prediction was the largest and most mature domain, itself comprising three sub-tasks.
 
-**(i) GA growth-rate prediction from baseline imaging.** The pivotal demonstration (A2) trained multitask deep-learning models on baseline FAF images and SD-OCT volumes from >1,700 eyes in lampalizumab trials to predict both current GA area and annualized growth rate. Concurrent *area* was predicted almost perfectly (squared Pearson r = 0.94–0.98), but the clinically harder *growth-rate* prediction was moderate (r = 0.48 on holdout; up to 0.65 on an independent set), with FAF outperforming OCT and the multimodal model offering little gain over FAF alone. A companion ablation study (A3) localized this predictive signal to the **junctional "rim"** surrounding the atrophy—consistent with the biology of margin expansion—and showed that pixel intensity was uninformative without textural context. The Vienna group (A4) advanced the field toward the clinic by predicting *individual* GA growth as a continuous en-face map **from a single baseline OCT** in routine-care patients, achieving 2-year Dice similarity of 0.80–0.82 and AUCs of 0.77–0.81 for flagging the fastest-progressing decile—directly relevant to therapeutic dosing decisions. Earlier work established the building blocks: hyperreflective-foci concentration in the junctional zone correlates with local growth (A6); BiLSTM models with explicit time factors predict the *location* of future growth (mean Dice 0.86–0.92, A7); and personalized voxel-level RORA risk maps are feasible (A9).
+**(i) GA growth-rate prediction from baseline imaging.** The pivotal demonstration (A2) trained multitask deep-learning models on baseline FAF images and SD-OCT volumes from >1,700 eyes in lampalizumab trials to predict both current GA area and annualized growth rate. Concurrent *area* was predicted almost perfectly (squared Pearson r = 0.94–0.98), but the clinically harder *growth-rate* prediction was moderate (r = 0.48 on holdout; up to 0.65 on an independent set), with FAF outperforming OCT and the multimodal model offering little gain over FAF alone. A companion ablation study (A3) localized this predictive signal to the **junctional "rim"** surrounding the atrophy—consistent with the biology of margin expansion—and showed that pixel intensity was uninformative without textural context. Two studies added by the supplementary search reinforce and sharpen this picture. Salvi et al. (A14) predicted the 1-year **region of growth** of GA from FAF using a 2D U-Net, achieving Dice 0.70 and r = 0.79 on the test set when combining baseline and 6-month images—showing that *where* atrophy will expand, not just how much, is learnable. Yoshida et al. (A15) systematically compared four ways of feeding 3D OCT to a network (en-face intensity maps, SLIVER-net, a 3D CNN, and layer-thickness/intensity maps) and found all approaches performed comparably for growth-rate prediction (r² ≈ 0.33–0.35), suggesting the signal available from a single baseline volume **may have reached a performance plateau**; crucially, the ellipsoid-zone and RPE layers carried essentially all of the predictive information, echoing the photoreceptor-centric theme seen in the treatment-response domain. The Vienna group (A4) advanced the field toward the clinic by predicting *individual* GA growth as a continuous en-face map **from a single baseline OCT** in routine-care patients, achieving 2-year Dice similarity of 0.80–0.82 and AUCs of 0.77–0.81 for flagging the fastest-progressing decile—directly relevant to therapeutic dosing decisions. Earlier work established the building blocks: hyperreflective-foci concentration in the junctional zone correlates with local growth (A6); BiLSTM models with explicit time factors predict the *location* of future growth (mean Dice 0.86–0.92, A7); and personalized voxel-level RORA risk maps are feasible (A9). Beyond the peer-reviewed included studies, the supplementary search surfaced converging **engineering-venue/preprint** directions: recurrent-plus-concurrent CNNs (ReConNet) that jointly forecast GA and Stargardt atrophy interval growth (Dice ≈ 0.60 for interval growth) and biologically grounded **Gompertz** growth-curve forecasting that outperforms linear/square-root models for patient-level lesion prediction—both signaling a move toward longitudinal, mechanism-aware modeling (see §4.5 and References 28–30).
 
 **(ii) Conversion from intermediate AMD to GA.** DeepGAze (A5), a position-aware CNN trained on AREDS2 and externally validated on two Heidelberg datasets, predicted 1-year iAMD→GA conversion with AUROC 0.94 and—critically—could enrich a hypothetical prevention trial for imminent progressors by 8.3–20.7-fold, a direct lever on trial feasibility and cost. Notably, adding expert-annotated OCT features did *not* improve on the fully automated model (P = .19), suggesting the network already captured the relevant morphology. Mechanistically, A8 showed that AI quantification can detect accelerated photoreceptor and outer-nuclear-layer thinning **12–18 months before** the OCT marker (OPL subsidence) that itself precedes atrophy—pushing the predictive horizon earlier. Complementary risk-stratification approaches used classical ML on OCT plus demographic features (A1, AREDS2) and DL ensembles on CFP with external validation (A13, 2-year late-AMD accuracy 86% internal / 84% external).
 
@@ -254,7 +261,7 @@ Every prediction above depends on reproducible measurement of atrophy and its su
 
 ### 4.1 Summary of principal findings
 
-This systematic review of 25 primary studies shows that artificial intelligence has advanced from *detecting and measuring* non-neovascular AMD and geographic atrophy to *predicting their trajectory, quantifying therapeutic response, and inferring visual function*. Three findings are of particular clinical importance. First, deep-learning models predict conversion from intermediate AMD to GA within one year with high discrimination (AUROC ~0.94) and can enrich prevention trials up to ~20-fold, while also outperforming ophthalmologists at ranking individual GA progression speed. Second, AI-based OCT segmentation has revealed that complement-inhibitor treatment effects are substantially larger on the photoreceptor/ellipsoid-zone layer than on the RPE, and that a baseline imaging biomarker (the EZ–RPE difference) predicts who benefits most—information that is invisible to conventional area-based assessment and directly relevant to patient selection. Third, models can predict visual acuity and dense retinal-sensitivity maps from structural OCT, offering objective functional surrogates that could reduce reliance on burdensome psychophysical testing.
+This systematic review of 27 primary studies shows that artificial intelligence has advanced from *detecting and measuring* non-neovascular AMD and geographic atrophy to *predicting their trajectory, quantifying therapeutic response, and inferring visual function*. Three findings are of particular clinical importance. First, deep-learning models predict conversion from intermediate AMD to GA within one year with high discrimination (AUROC ~0.94) and can enrich prevention trials up to ~20-fold, while also outperforming ophthalmologists at ranking individual GA progression speed. Second, AI-based OCT segmentation has revealed that complement-inhibitor treatment effects are substantially larger on the photoreceptor/ellipsoid-zone layer than on the RPE, and that a baseline imaging biomarker (the EZ–RPE difference) predicts who benefits most—information that is invisible to conventional area-based assessment and directly relevant to patient selection. Third, models can predict visual acuity and dense retinal-sensitivity maps from structural OCT, offering objective functional surrogates that could reduce reliance on burdensome psychophysical testing.
 
 ### 4.2 Interpretation in context
 
@@ -285,7 +292,7 @@ These results align with, and extend, prior narrative and systematic reviews of 
 
 ### 4.5 Future directions
 
-The field should converge on standardized, photoreceptor-inclusive OCT endpoints; pursue prospective external validation across devices and populations; adopt TRIPOD-AI/PROBAST reporting; and develop and validate AI-derived functional surrogates (inferred microperimetry, LLVA) to shorten and de-risk GA trials. Integrating longitudinal, multimodal, and potentially genetic data into unified prognostic models—and rigorously testing them for equity—is the natural next step toward clinically deployable, individualized prediction.
+The field should converge on standardized, photoreceptor-inclusive OCT endpoints; pursue prospective external validation across devices and populations; adopt TRIPOD-AI/PROBAST reporting; and develop and validate AI-derived functional surrogates (inferred microperimetry, LLVA) to shorten and de-risk GA trials. Integrating longitudinal, multimodal, and potentially genetic data into unified prognostic models—and rigorously testing them for equity—is the natural next step toward clinically deployable, individualized prediction. Three directions surfaced by the supplementary search deserve emphasis. First, the apparent **performance plateau** for single-baseline growth-rate prediction (A15) implies that further gains will come from *longitudinal* modeling—recurrent architectures such as ReConNet and mechanism-aware growth models (e.g., Gompertz forecasting) that exploit repeated visits rather than ever-larger single-timepoint networks. Second, **explainability and regulatory acceptance**: emerging neuro-symbolic and large-language-model frameworks that fuse imaging with structured clinical text aim to make prognostic reasoning transparent, addressing the "black-box" barrier to clinical and regulatory adoption. Third, **equity and generalizability** must be evaluated explicitly, as current cohorts are dominated by clinical-trial and single-center populations of limited ancestral diversity.
 
 ---
 
@@ -327,7 +334,36 @@ Artificial intelligence can now predict the progression of non-neovascular AMD a
 
 ---
 
-## 7. Appendix A — Executed PubMed search strategies (5 July 2026)
+## 7. TRIPOD-AI reporting appraisal of included prediction-model studies
+
+The **TRIPOD-AI** statement (Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis — Artificial Intelligence extension, 2024) specifies reporting items expected of AI/ML prediction-model studies. We appraised the reporting completeness of the included primary studies against a condensed set of TRIPOD-AI–informed items. Ratings are at the **body-of-evidence level** (proportion of included prediction studies adequately reporting each item): 🟢 = well reported by most studies; 🟡 = variably/partially reported; 🔴 = poorly reported by most.
+
+**Table 3. TRIPOD-AI–informed reporting appraisal (across included prediction studies, Domains A–C, n = 22).**
+
+| TRIPOD-AI item (condensed) | Rating | Comment |
+|---|---|---|
+| Title/abstract identify AI prediction model & task | 🟢 | Consistently clear (e.g., "predict GA growth rate," "predict progression to GA"). |
+| Source of data (design; trial vs routine care) | 🟢 | Generally explicit; many post-hoc trial analyses named (FILLY, OAKS/DERBY, lampalizumab, AREDS2). |
+| Participants: eligibility, setting, dates | 🟡 | Trial-derived cohorts well described; routine-care cohorts vary in detail. |
+| Sample size rationale / power | 🔴 | Rarely justified relative to model complexity. |
+| Predictors / inputs (imaging modality, preprocessing) | 🟢 | Modality and architecture usually specified. |
+| Outcome definition (e.g., cRORA, EZ loss, VA, dB) | 🟡 | Heterogeneous definitions across studies limit comparability. |
+| Handling of missing data | 🔴 | Seldom reported. |
+| Model architecture & training details | 🟡 | Architectures named; hyperparameters/augmentation variably reported. |
+| Internal validation (cross-val/holdout) | 🟢 | Almost always reported. |
+| **External validation** | 🔴 | Present in a minority (A2, A5, A13, C2; D1, D3); most report internal only. |
+| Performance metrics with uncertainty (CI) | 🟡 | Point estimates common; confidence intervals inconsistently reported (strongest in A2, A5). |
+| Calibration (not just discrimination) | 🔴 | Rarely assessed for risk models. |
+| Handling of two-eye correlation | 🟡 | Inconsistent; several use eyes as independent units. |
+| Fairness / subgroup (ancestry, device, site) | 🔴 | Almost never reported. |
+| Data/code availability | 🟡 | Public code in some (DeepSeeNet, ReSensNet, Moorfields, RPD); many closed. |
+| Interpretability / explainability | 🟡 | Ablation/feature-importance in several (A3, A10, C1); black-box otherwise. |
+
+**Overall TRIPOD-AI impression:** reporting is strong for task definition, data source, and internal validation, but weak for sample-size justification, external validation, calibration, missing-data handling, and fairness—precisely the items most consequential for clinical deployment. Future studies should report against the full TRIPOD-AI checklist and PROBAST.
+
+---
+
+## 8. Appendix A — Executed search strategies (5 July 2026)
 
 | # | Query (concept blocks joined by AND) | Hits |
 |---|---|---|
@@ -340,13 +376,23 @@ Artificial intelligence can now predict the progression of non-neovascular AMD a
 | S7 | AI AND AMD AND (prognosis OR predicting progression) AND (fundus autofluorescence OR OCT) | 151 |
 | S8 | (DL/AI) AND AMD AND (conversion OR progression) AND (AREDS OR color fundus) AND late | 6 |
 | S9 | (ML/DL) AND geographic atrophy AND (retinal sensitivity OR microperimetry OR structure-function OR visual acuity) AND prediction | 22 |
-| | **Total hits (pre-deduplication)** | **911** |
+| | **Total PubMed hits (pre-deduplication)** | **911** |
 
 Source database: PubMed / PubMed Central (accessed via programmatic MCP interface). Automatic term mapping (MeSH) retained; results relevance-ranked.
 
+**Supplementary multi-database web search (Scopus, Embase, Web of Science, IEEE Xplore, arXiv, medRxiv):**
+
+| # | Free-text web query | Purpose |
+|---|---|---|
+| W1 | deep learning geographic atrophy growth rate prediction OCT IEEE arXiv model | Capture engineering-venue GA growth models |
+| W2 | machine learning predict progression geographic atrophy AMD Scopus Embase treatment response | Capture subscription-indexed progression/treatment studies |
+| W3 | artificial intelligence dry AMD functional outcome visual acuity prediction deep learning 2024 2025 | Capture recent functional-outcome models |
+
+New eligible peer-reviewed records added: Salvi et al. 2024 (A14) and Yoshida et al. 2025 (A15). Emerging/preprint records identified and discussed but not counted as included studies: ReConNet (recurrent concurrent atrophy forecasting), an explainable neuro-symbolic/LLM AMD-prognosis framework, and a Gompertz patient-level growth-forecasting model.
+
 ---
 
-## 8. References
+## 9. References
 
 *The following sources were retrieved from **PubMed / PubMed Central**. In accordance with PubMed's terms of use, each reference includes a DOI link to the original article. Attribution: bibliographic data and abstracts were obtained from PubMed.*
 
@@ -367,41 +413,49 @@ Source database: PubMed / PubMed Central (accessed via programmatic MCP interfac
 11. Generating future fundus images for early age-related macular degeneration based on generative adversarial networks. *Comput Methods Programs Biomed.* 2022;226:106648. [DOI](https://doi.org/10.1016/j.cmpb.2022.106648)
 12. A Novel Management Challenge in Age-Related Macular Degeneration: Artificial Intelligence and Expert Prediction of Geographic Atrophy. *Ophthalmol Retina.* 2024. [DOI](https://doi.org/10.1016/j.oret.2024.10.029)
 13. Bhuiyan A, Wong TY, Ting DSW, Govindaiah A, Souied EH, Smith RT. Artificial Intelligence to Stratify Severity of Age-Related Macular Degeneration (AMD) and Predict Risk of Progression to Late AMD. *Transl Vis Sci Technol.* 2020;9(2):25. [DOI](https://doi.org/10.1167/tvst.9.2.25)
+14. Salvi A, Cluceru J, Gao SS, et al. Deep Learning to Predict the Future Growth of Geographic Atrophy from Fundus Autofluorescence. *Ophthalmol Sci.* 2024;5(2):100635. *(Added via supplementary search.)* [DOI](https://doi.org/10.1016/j.xops.2024.100635)
+15. Yoshida K, Anegondi N, Pely A, et al. Deep Learning Approaches to Predict Geographic Atrophy Progression Using Three-Dimensional OCT Imaging. *Transl Vis Sci Technol.* 2025;14(2):11. *(Added via supplementary search.)* [DOI](https://doi.org/10.1167/tvst.14.2.11)
 
 **Domain B — Treatment-response quantification**
 
-14. Riedl S, et al. Predicting Topographic Disease Progression and Treatment Response of Pegcetacoplan in Geographic Atrophy Quantified by Deep Learning. *Ophthalmol Retina.* 2022. [DOI](https://doi.org/10.1016/j.oret.2022.08.003)
-15. Disease Activity and Therapeutic Response to Pegcetacoplan for Geographic Atrophy Identified by Deep Learning-Based Analysis of OCT (OAKS/DERBY). *Ophthalmology.* 2024. [DOI](https://doi.org/10.1016/j.ophtha.2024.08.017)
-16. Association of complement C3 inhibitor pegcetacoplan with reduced photoreceptor degeneration beyond areas of geographic atrophy. *Sci Rep.* 2022;12:17870. [DOI](https://doi.org/10.1038/s41598-022-22404-9)
-17. Deep-learning automated quantification of longitudinal OCT scans demonstrates reduced RPE loss rate, preservation of intact macular area and predictive value of isolated photoreceptor degeneration in geographic atrophy patients receiving C3 inhibition treatment. *Br J Ophthalmol.* 2024. [DOI](https://doi.org/10.1136/bjo-2022-322672)
+16. Riedl S, et al. Predicting Topographic Disease Progression and Treatment Response of Pegcetacoplan in Geographic Atrophy Quantified by Deep Learning. *Ophthalmol Retina.* 2022. [DOI](https://doi.org/10.1016/j.oret.2022.08.003)
+17. Disease Activity and Therapeutic Response to Pegcetacoplan for Geographic Atrophy Identified by Deep Learning-Based Analysis of OCT (OAKS/DERBY). *Ophthalmology.* 2024. [DOI](https://doi.org/10.1016/j.ophtha.2024.08.017)
+18. Association of complement C3 inhibitor pegcetacoplan with reduced photoreceptor degeneration beyond areas of geographic atrophy. *Sci Rep.* 2022;12:17870. [DOI](https://doi.org/10.1038/s41598-022-22404-9)
+19. Deep-learning automated quantification of longitudinal OCT scans demonstrates reduced RPE loss rate, preservation of intact macular area and predictive value of isolated photoreceptor degeneration in geographic atrophy patients receiving C3 inhibition treatment. *Br J Ophthalmol.* 2024. [DOI](https://doi.org/10.1136/bjo-2022-322672)
 
 **Domain C — Functional-outcome prediction**
 
-18. Prediction of visual function from automatically quantified optical coherence tomography biomarkers in patients with geographic atrophy using machine learning. *Sci Rep.* 2022;12:15565. [DOI](https://doi.org/10.1038/s41598-022-19413-z)
-19. Seeböck P, Vogl WD, Waldstein SM, et al. Linking Function and Structure with ReSensNet: Predicting Retinal Sensitivity from OCT using Deep Learning. *Ophthalmol Retina.* 2022;6(6):501–511. [DOI](https://doi.org/10.1016/j.oret.2022.01.021)
-20. Evaluating the Progression of Retinal Sensitivity Loss in Geographic Atrophy Using Machine-Learning-Based Structure-Function Correlation (OMEGA 2). *Invest Ophthalmol Vis Sci.* 2025;66(11):34. [DOI](https://doi.org/10.1167/iovs.66.11.34)
+20. Prediction of visual function from automatically quantified optical coherence tomography biomarkers in patients with geographic atrophy using machine learning. *Sci Rep.* 2022;12:15565. [DOI](https://doi.org/10.1038/s41598-022-19413-z)
+21. Seeböck P, Vogl WD, Waldstein SM, et al. Linking Function and Structure with ReSensNet: Predicting Retinal Sensitivity from OCT using Deep Learning. *Ophthalmol Retina.* 2022;6(6):501–511. [DOI](https://doi.org/10.1016/j.oret.2022.01.021)
+22. Evaluating the Progression of Retinal Sensitivity Loss in Geographic Atrophy Using Machine-Learning-Based Structure-Function Correlation (OMEGA 2). *Invest Ophthalmol Vis Sci.* 2025;66(11):34. [DOI](https://doi.org/10.1167/iovs.66.11.34)
 
 **Domain D — Enabling automated quantification**
 
-21. Clinically relevant deep learning for detection and quantification of geographic atrophy from optical coherence tomography: a model development and external validation study. *Lancet Digit Health.* 2021;3(10):e665–e675. [DOI](https://doi.org/10.1016/S2589-7500(21)00134-5)
-22. A Deep Learning Model for Automated Segmentation of Geographic Atrophy Imaged Using Swept-Source OCT. *Ophthalmol Retina.* 2022. [DOI](https://doi.org/10.1016/j.oret.2022.08.007)
-23. Deep Learning-Based Detection of Reticular Pseudodrusen in Age-Related Macular Degeneration. *Clin Exp Ophthalmol.* 2025. [DOI](https://doi.org/10.1111/ceo.14607)
-24. Deep Learning-Based Automated Segmentation and Quantification of the Ellipsoid Zone and the RPE-Bruch's Membrane Complex in Healthy Subjects and in Geographic Atrophy. *Diagnostics (Basel).* 2026;16(12):1872. [DOI](https://doi.org/10.3390/diagnostics16121872)
-25. Near-Infrared Reflectance Imaging for the Assessment of Geographic Atrophy Using Deep Learning. *Retina.* 2025. [DOI](https://doi.org/10.1097/IAE.0000000000004614)
+23. Clinically relevant deep learning for detection and quantification of geographic atrophy from optical coherence tomography: a model development and external validation study. *Lancet Digit Health.* 2021;3(10):e665–e675. [DOI](https://doi.org/10.1016/S2589-7500(21)00134-5)
+24. A Deep Learning Model for Automated Segmentation of Geographic Atrophy Imaged Using Swept-Source OCT. *Ophthalmol Retina.* 2022. [DOI](https://doi.org/10.1016/j.oret.2022.08.007)
+25. Deep Learning-Based Detection of Reticular Pseudodrusen in Age-Related Macular Degeneration. *Clin Exp Ophthalmol.* 2025. [DOI](https://doi.org/10.1111/ceo.14607)
+26. Deep Learning-Based Automated Segmentation and Quantification of the Ellipsoid Zone and the RPE-Bruch's Membrane Complex in Healthy Subjects and in Geographic Atrophy. *Diagnostics (Basel).* 2026;16(12):1872. [DOI](https://doi.org/10.3390/diagnostics16121872)
+27. Near-Infrared Reflectance Imaging for the Assessment of Geographic Atrophy Using Deep Learning. *Retina.* 2025. [DOI](https://doi.org/10.1097/IAE.0000000000004614)
+
+### Emerging methods identified by the supplementary search (preprint / non-included; discussed in §3.4.1 and §4.5)
+
+28. Mishra Z, Wang Z, Xu E, et al. Recurrent and Concurrent Prediction of Longitudinal Progression of Stargardt Atrophy and Geographic Atrophy (ReConNet). *medRxiv* 2024 (preprint). [DOI](https://doi.org/10.1101/2024.02.11.24302670)
+29. Explainable Artificial Intelligence Framework for Predicting Treatment Outcomes in Age-Related Macular Degeneration (neuro-symbolic + LLM). *Sensors (Basel).* 2025;25(22):6879. [DOI](https://doi.org/10.3390/s25226879)
+30. Beckwith AD, McNamara SM, Veturi YA, et al. Patient-level forecasting of geographic atrophy with a biologically grounded Gompertz model. *medRxiv* 2025 (preprint). [DOI](https://doi.org/10.1101/2025.10.02.25337187)
 
 ### Selected context sources (reviews and related work; not counted among included studies)
 
-26. Artificial Intelligence Algorithms for Analysis of Geographic Atrophy: A Review and Evaluation. *Transl Vis Sci Technol.* 2020;9(2):57. [DOI](https://doi.org/10.1167/tvst.9.2.57)
-27. The Predictive Capabilities of Artificial Intelligence-Based OCT Analysis for Age-Related Macular Degeneration Progression—A Systematic Review. *Diagnostics (Basel).* 2023;13(14):2464. [DOI](https://doi.org/10.3390/diagnostics13142464)
-28. Artificial intelligence in age-related macular degeneration: Advancing diagnosis, prognosis, and treatment. *Surv Ophthalmol.* 2025. [DOI](https://doi.org/10.1016/j.survophthal.2025.09.007)
-29. Artificial intelligence for geographic atrophy: pearls and pitfalls. *Curr Opin Ophthalmol.* 2024. [DOI](https://doi.org/10.1097/ICU.0000000000001085)
-30. Multimodal imaging and deep learning in geographic atrophy secondary to age-related macular degeneration. *Acta Ophthalmol.* 2023. [DOI](https://doi.org/10.1111/aos.15796)
-31. Imaging and artificial intelligence for progression of age-related macular degeneration. *Exp Biol Med (Maywood).* 2021. [DOI](https://doi.org/10.1177/15353702211031547)
-32. Rethinking Clinical Trials in Age-Related Macular Degeneration: How AI-Based OCT Analysis Can Support Successful Outcomes. *Pharmaceuticals (Basel).* 2025;18(3):284. [DOI](https://doi.org/10.3390/ph18030284)
-33. DeepSeeNet: A Deep Learning Model for Automated Classification of Patient-based Age-related Macular Degeneration Severity from Color Fundus Photographs. *Ophthalmology.* 2019;126(4):565–575. [DOI](https://doi.org/10.1016/j.ophtha.2018.11.015)
-34. Biomarkers for the Progression of Intermediate Age-Related Macular Degeneration. *Ophthalmol Ther.* 2023. [DOI](https://doi.org/10.1007/s40123-023-00807-9)
-35. Therapeutic innovations for geographic atrophy: A promising horizon. *Curr Opin Pharmacol.* 2024;78:102484. [DOI](https://doi.org/10.1016/j.coph.2024.102484)
+31. Artificial Intelligence Algorithms for Analysis of Geographic Atrophy: A Review and Evaluation. *Transl Vis Sci Technol.* 2020;9(2):57. [DOI](https://doi.org/10.1167/tvst.9.2.57)
+32. The Predictive Capabilities of Artificial Intelligence-Based OCT Analysis for Age-Related Macular Degeneration Progression—A Systematic Review. *Diagnostics (Basel).* 2023;13(14):2464. [DOI](https://doi.org/10.3390/diagnostics13142464)
+33. Artificial intelligence in age-related macular degeneration: Advancing diagnosis, prognosis, and treatment. *Surv Ophthalmol.* 2025. [DOI](https://doi.org/10.1016/j.survophthal.2025.09.007)
+34. Artificial intelligence for geographic atrophy: pearls and pitfalls. *Curr Opin Ophthalmol.* 2024. [DOI](https://doi.org/10.1097/ICU.0000000000001085)
+35. Multimodal imaging and deep learning in geographic atrophy secondary to age-related macular degeneration. *Acta Ophthalmol.* 2023. [DOI](https://doi.org/10.1111/aos.15796)
+36. Imaging and artificial intelligence for progression of age-related macular degeneration. *Exp Biol Med (Maywood).* 2021. [DOI](https://doi.org/10.1177/15353702211031547)
+37. Rethinking Clinical Trials in Age-Related Macular Degeneration: How AI-Based OCT Analysis Can Support Successful Outcomes. *Pharmaceuticals (Basel).* 2025;18(3):284. [DOI](https://doi.org/10.3390/ph18030284)
+38. DeepSeeNet: A Deep Learning Model for Automated Classification of Patient-based Age-related Macular Degeneration Severity from Color Fundus Photographs. *Ophthalmology.* 2019;126(4):565–575. [DOI](https://doi.org/10.1016/j.ophtha.2018.11.015)
+39. Biomarkers for the Progression of Intermediate Age-Related Macular Degeneration. *Ophthalmol Ther.* 2023. [DOI](https://doi.org/10.1007/s40123-023-00807-9)
+40. Therapeutic innovations for geographic atrophy: A promising horizon. *Curr Opin Pharmacol.* 2024;78:102484. [DOI](https://doi.org/10.1016/j.coph.2024.102484)
 
 ---
 
-*Methodology note: This review was produced with the Academic Research Skills systematic-review protocol (deep-research skill, systematic-review mode). AI assistance was used for literature retrieval (PubMed), screening, data extraction, appraisal, and drafting; all included citations correspond to real, indexed PubMed records with the DOIs listed above. As disclosed in §2 and §4.4, the review used single-database, single-reviewer, relevance-ranked screening and was not prospectively registered; these deviations should be weighed when interpreting the completeness of the evidence base.*
+*Methodology note: This review was produced with the Academic Research Skills systematic-review protocol (deep-research skill, systematic-review mode). Literature was retrieved from PubMed/PMC and a supplementary web-interface search of Scopus, Embase, Web of Science, IEEE Xplore, arXiv, and medRxiv. AI assistance was used for retrieval, screening, data extraction, appraisal, and drafting; all included citations correspond to real, indexed records with the DOIs listed above. As disclosed in §2 and §4.4, the review used partial multi-database coverage (subscription databases queried via web interface, not API), single-reviewer relevance-ranked screening, and was not prospectively registered; these deviations should be weighed when interpreting the completeness of the evidence base. Bibliographic data and abstracts for PubMed-indexed sources were obtained from PubMed.*
